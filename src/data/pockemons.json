@@ -1,0 +1,52 @@
+[
+  {
+    "name": "bulbasaur",
+    "types": ["grass", "poison"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+  },
+  {
+    "name": "ivysaur",
+    "types": ["grass", "poison"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+  },
+  {
+    "name": "venusaur",
+    "types": ["grass", "poison"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+  },
+  {
+    "name": "charmander",
+    "types": ["fire"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+  },
+  {
+    "name": "charmeleon",
+    "types": ["fire"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+  },
+  {
+    "name": "charizard",
+    "types": ["fire", "flying"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+  },
+  {
+    "name": "squirtle",
+    "types": ["water"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+  },
+  {
+    "name": "wartortle",
+    "types": ["water"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+  },
+  {
+    "name": "blastoise",
+    "types": ["water"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+  },
+  {
+    "name": "caterpie",
+    "types": ["bug"],
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"
+  }
+]
