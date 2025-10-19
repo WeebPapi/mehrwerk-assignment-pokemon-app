@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { capitalizeFirstLetter } from "../utils/helpers"
+import TypeBadge from "./TypeBadge"
 
 interface PokemonCardProps {
   sprite: string
@@ -54,9 +55,14 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({
       </div>
 
       <div className="h-16 flex items-center justify-between">
-        <h2 className=" text-black text-xl font-light tracking-wide">
+        <h2 className=" text-black text-lg font-light tracking-wide">
           {capitalizeFirstLetter(name)}
         </h2>
+        <div className="w-full flex justify-end gap-2">
+          {types.map((type) => (
+            <TypeBadge key={type} type={type} />
+          ))}
+        </div>
       </div>
     </div>
   )
