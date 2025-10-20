@@ -9,6 +9,7 @@ interface Props {
 const PokemonStats: React.FC<Props> = ({ stats }) => {
   return (
     <div className="bg-white rounded-2xl  p-6 pl-0 text-black">
+      <h3 className="text-2xl mb-4">Stats</h3>
       {stats.map((stat) => (
         <StatBar
           key={stat.stat.name}

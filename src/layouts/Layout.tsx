@@ -8,22 +8,22 @@ const Layout: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       <header className="w-full bg-red-600 text-white shadow-md">
-        <nav className="container w-full px-4 flex items-center justify-between p-4">
-          {!isHome && (
-            <Link
-              to="/"
-              className="rounded-md px-3 py-1 text-lg font-medium text-white"
-            >
-              {"< Back"}
-            </Link>
-          )}
-          <div className="flex items-center gap-4">
-            <h1 className="text-xl font-bold tracking-tight">
+        <nav className="container w-full px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 gap-4 sm:gap-2">
+          <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+            {!isHome && (
+              <Link
+                to="/"
+                className="flex w-9 h-9 shrink-0 items-center justify-center rounded-full text-xl font-bold text-white transition-colors hover:bg-red-700 sm:h-10 sm:w-10 sm:text-2xl"
+                aria-label="Go back to home"
+              >
+                {"<"}
+              </Link>
+            )}
+            <h1 className="mt-2 font-bold tracking-tight text-lg sm:text-xl">
               Mehrwerk Pokedex
             </h1>
           </div>
-
-          <div>
+          <div className="flex">
             <APIToggle />
           </div>
         </nav>

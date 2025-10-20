@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom"
-
 import PokemonDetail from "./pages/PokemonDetail"
 import ListPage from "./pages/ListPage"
 import { ApiProvider } from "./components/APIProvider"
