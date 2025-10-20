@@ -25,16 +25,20 @@ export const fetchPokemonList = async (): Promise<PokemonListItem[]> => {
       response.data.results.map(async (p: { url: string }) => {
         const id = parseInt(p.url.split("/").slice(-2, -1)[0])
         const pokemonData = await fetchPokemonById(id)
+
+        if (!pokemonData) {
+          console.error(`No data for Pokemon ID ${id}`)
+          return null
+        }
         return {
           id: id,
           name: pokemonData.name,
           front_default: pokemonData.sprites.front_default,
-          types: pokemonData.types.map(
-            (typeInfo: PokemonType) => typeInfo.type.name
-          ),
+          types: pokemonData.types,
         }
       })
     )
+
     return fullResp
   } catch (error) {
     console.error("Error fetching Pokemon list:", error)

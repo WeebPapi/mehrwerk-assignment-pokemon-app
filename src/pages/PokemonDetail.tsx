@@ -5,6 +5,7 @@ import { fetchPokemonById } from "../services/pokeapi"
 import { useApi } from "../hooks/useApi"
 import { fetchPokemonByIdJSON } from "../services/customapi"
 import PokemonImageView from "../components/PokemonImageView"
+import PokemonInfo from "../components/PokemonInfo"
 
 const PokemonDetail = () => {
   const { id } = useParams<{ id: string }>()
@@ -22,7 +23,7 @@ const PokemonDetail = () => {
     fetchPokemon()
   }, [id, apiType])
   return (
-    <div>
+    <div className="flex sm:flex-row flex-col gap-4">
       <PokemonImageView
         imgUrl={
           apiType === "pokeapi"
@@ -32,6 +33,11 @@ const PokemonDetail = () => {
         id={id!}
         name={pokemon?.name || "Missingno"}
         types={pokemon?.types || ["unknown"]}
+      />
+      <PokemonInfo
+        weight={pokemon?.weight || 0}
+        height={pokemon?.height || 0}
+        stats={pokemon?.stats || []}
       />
     </div>
   )

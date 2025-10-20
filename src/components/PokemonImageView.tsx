@@ -11,7 +11,7 @@ interface Props {
 
 const PokemonImageView: React.FC<Props> = ({ imgUrl, id, name, types }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 max-w-[400px] ">
+    <div className="bg-white rounded-2xl shadow-lg p-6 max-w-[400px] h-[50%]">
       <div className="bg-gray-100 rounded-4xl flex flex-col items-center p-4">
         <p className="text-2xl text-gray-700">#{id.padStart(3, "0")}</p>
         <img
@@ -20,7 +20,7 @@ const PokemonImageView: React.FC<Props> = ({ imgUrl, id, name, types }) => {
           alt={`Pokemon ${name}`}
         />
       </div>
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex justify-between items-center mt-4 gap-4">
         <h2 className="text-xl font-semibold text-gray-800 ">
           {capitalizeFirstLetter(name)}
         </h2>
