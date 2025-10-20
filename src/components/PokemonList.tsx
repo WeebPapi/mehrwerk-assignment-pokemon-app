@@ -5,22 +5,16 @@ import { PokemonCard } from "./PokemonCard"
 
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState<PokemonListItem[]>([])
-  const firstRender = React.useRef(true)
   useEffect(() => {
-    if (firstRender.current) {
-      firstRender.current = false
-      return
-    }
     const fetchData = async () => {
       const data = await fetchPokemonList()
       setPokemon(data)
     }
     fetchData()
-    console.log(pokemon)
-  }, [firstRender.current])
+  }, [])
   return (
-    <div className="grid grid-cols-3 gap-12">
-      {!firstRender.current &&
+    <div className="grid sm:grid-cols-3 sm:gap-12 grid-cols-1 gap-8 ">
+      {pokemon.length > 0 &&
         pokemon.map((p) => (
           <PokemonCard
             key={p.name}

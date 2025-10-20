@@ -18,6 +18,7 @@ const bgs = [
   "bg-5.jpg",
   "bg-6.webp",
   "bg-7.webp",
+  "bg-8.png",
 ]
 
 export const PokemonCard: React.FC<PokemonCardProps> = ({
@@ -39,7 +40,7 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({
       onClick={() => {
         navigate(`/pokemon/${id}`)
       }}
-      className="w-80 h-96 bg-white rounded-lg shadow-lg p-3 flex flex-col justify-between"
+      className="w-80 h-96 hover:scale-105 transition-all cursor-pointer bg-white rounded-lg shadow-lg p-3 flex flex-col justify-between"
     >
       <div
         className="flex-1 rounded-sm bg-cover bg-center flex items-center justify-center overflow-hidden mb-4"
