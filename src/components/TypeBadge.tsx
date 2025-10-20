@@ -21,7 +21,7 @@ const TypeBadge: React.FC<TypeBadgeProps> = ({ type }) => {
       case "poison":
         return "bg-purple-500"
       default:
-        return "bg-gray-400" // Default color for unknown types
+        return "bg-gray-400"
     }
   }
 

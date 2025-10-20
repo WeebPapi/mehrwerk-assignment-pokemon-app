@@ -1,17 +1,24 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import type { PokemonListItem } from "../types/pokemon"
 import { fetchPokemonList } from "../services/pokeapi"
 import { PokemonCard } from "./PokemonCard"
+import { useApi } from "../hooks/useApi"
+import { fetchPokemonListJSON } from "../services/customapi"
 
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState<PokemonListItem[]>([])
+  const { apiType } = useApi()
+
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchPokemonList()
+      const data =
+        apiType === "pokeapi"
+          ? await fetchPokemonList()
+          : await fetchPokemonListJSON()
       setPokemon(data)
     }
     fetchData()
-  }, [])
+  }, [apiType])
   return (
     <div className="grid sm:grid-cols-3 sm:gap-12 grid-cols-1 gap-8 ">
       {pokemon.length > 0 &&

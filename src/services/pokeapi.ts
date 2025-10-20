@@ -6,7 +6,12 @@ const BASE_URL = "https://pokeapi.co/api/v2"
 export const fetchPokemonById = async (id: number) => {
   try {
     const response = await axios.get(`${BASE_URL}/pokemon/${id}`)
-    return response.data
+    return {
+      ...response.data,
+      types: response.data.types.map(
+        (typeInfo: PokemonType) => typeInfo.type.name
+      ),
+    }
   } catch (error) {
     console.error(`Error fetching Pokemon with id ${id}:`, error)
     throw error

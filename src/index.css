@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#root {
+  width: 100%;
+}
 
 @font-face {
   font-family: "PokemonGb";
@@ -40,9 +43,9 @@ body {
   min-width: 320px;
   width: 100%;
   min-height: 100vh;
-  background-image: url(/src/assets/App-bg.png);
+  /* background-image: url(/src/assets/App-bg.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 h1 {
