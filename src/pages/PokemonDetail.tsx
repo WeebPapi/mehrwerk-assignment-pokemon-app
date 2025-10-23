@@ -23,7 +23,7 @@ const PokemonDetail = () => {
     fetchPokemon()
   }, [id, apiType])
   return (
-    <div className="flex sm:flex-row flex-col gap-4">
+    <div className="flex sm:flex-row flex-col gap-4 ">
       <PokemonImageView
         imgUrl={
           apiType === "pokeapi"

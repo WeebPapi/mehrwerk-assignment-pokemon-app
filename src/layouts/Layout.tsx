@@ -7,8 +7,8 @@ const Layout: React.FC = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
-      <header className="w-full bg-red-600 text-white shadow-md">
-        <nav className="container w-full px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 gap-4 sm:gap-2">
+      <header className=" bg-red-600 text-white shadow-md">
+        <nav className="container w-[90%] sm:w-full flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 gap-4 sm:gap-2">
           <div className="flex min-w-0 items-center gap-3 sm:gap-4">
             {!isHome && (
               <Link
@@ -28,7 +28,7 @@ const Layout: React.FC = () => {
           </div>
         </nav>
       </header>
-      <main className="container mx-auto flex-grow p-4 flex justify-center items-center">
+      <main className="container mx-auto flex-grow py-8 sm:p-6 flex justify-center items-center">
         <Outlet />
       </main>
     </div>
